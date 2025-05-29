@@ -1,4 +1,4 @@
-name: "Build and populate cache"
+name: "Update package version"
 permissions:
   contents: write
   pull-requests: write

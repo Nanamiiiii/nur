@@ -3,7 +3,7 @@
 
 stdenv.mkDerivation (finalAttrs: {
   pname = "obsidian-headless";
-  version = "0.0.9";
+  version = "0-unstable-2026-03-22";
   rev = "5f51535b744625ee2cf47d61f704d4d9276590b7";
 
   src = fetchFromGitHub {
@@ -50,6 +50,8 @@ stdenv.mkDerivation (finalAttrs: {
     chmod +x $out/bin/ob
     runHook postInstall
   '';
+
+  passthru.updateScript = ./update.sh;
 
   meta = {
     description =
